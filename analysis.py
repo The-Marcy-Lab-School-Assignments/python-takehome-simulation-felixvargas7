@@ -55,8 +55,8 @@ with open('output.txt', 'w') as f:
     f.write(f"\n")
     f.write(f"Most common complaint type: {max_complaint} ({count} requests)\n")
     f.write("\n")
-    f.write(f"Request per borough: \n")
-    for borough in sorted_boroughs:
+    f.write(f"Requests per borough: \n")
+    for borough in sorted_boroughs: # since we need to display each borough and their requests, we a dynamic display with a for loop, it writes each borough within the sorted borough dictionary, and also the requests by accessing the previous borough_requests, which holds the request count. We also use sorted_boroughs because the problem asked for the list to be sorted alphabetically
        f.write(f"- {borough}: {borough_requests[borough]}\n")
 
 print("Output saved to output.txt")
